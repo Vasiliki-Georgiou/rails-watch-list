@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
+# Cloudinary
+gem "cloudinary"
+
 # Front end gems
 
 gem "bootstrap", "~> 5.2"

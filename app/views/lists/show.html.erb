@@ -1,0 +1,18 @@
+<h1>List Details</h1>
+
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title"><%= @list.name %></h5>
+  </div>
+  <div class="card-body d-flex flex-column align-items-center">
+    <%= link_to "Back to Lists", lists_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+
+<div>
+  <% @list.bookmarks.each do |bookmark| %>
+  <p><%= bookmark.comment %></p>
+  <p><%= bookmark.movie.title %></p>
+  <% end %>
+</div>

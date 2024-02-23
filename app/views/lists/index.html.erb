@@ -1,0 +1,16 @@
+<h1>My Lists</h1>
+
+<ul class="list-unstyled">
+    <div class="d-flex flex-wrap">
+        <% @lists.each do |list| %>
+        <div class="card mb-3 ms-3" style="width: 18rem; height: 14rem;">
+          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <li  class="card-title text-center fw-bold">
+                 <%= link_to list.name, list_path(list), class: "text-decoration-none text-primary" %>
+            </li>
+          </div>
+      </div>
+        <% end %>
+
+      </div>
+    </div>

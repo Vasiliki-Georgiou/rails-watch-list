@@ -1,0 +1,9 @@
+<div class="form-wrapper mb-5">
+  <%= simple_form_for([@list, @bookmark]) do |f| %>
+    <%= f.input :comment %>
+    <%= f.input :movie_id, collection: Movie.all %>
+    <div class="d-flex justify-content-center mt-2">
+      <%= f.submit class: "btn btn-primary p-3 border-2 me-2" %>
+    </div>
+  <% end %>
+</div>

@@ -1,12 +1,19 @@
-<h1 class="text-center mt-3 mb-4">My Movie Lists</h1>
+<div class="banner">
+  <div class="container">
+    <h1 class="text-center mt-3 mb-4">My Movie Lists</h1>
+  </div>
+</div>
 
-<div>
+<div class="container">
     <ul class="list-unstyled mt-2">
         <div class="d-flex flex-wrap">
             <% @lists.each do |list| %>
             <div class="card mb-3 ms-3 rounded" style="width: 18rem; height: 14rem;">
               <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                <li  class="card-title text-center fw-bold">
+                    <% if list.photo.attached? %>
+                      <%= cl_image_tag list.photo.key, height: 100, width: 100, crop: :fill %>
+                    <% end %>
+                <li  class="card-title text-center fw-bold mt-3">
                     <%= link_to list.name, list_path(list), class: "text-decoration-none text-dark" %>
                 </li>
               </div>

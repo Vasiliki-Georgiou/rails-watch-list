@@ -1,14 +1,19 @@
-<h1 class="text-center mt-3 mb-4">Add a new article here
-  <i class="fa fa-plus"></i>
-</h1>
+<div class="banner">
+  <div class="container">
+    <h1 class="text-center mt-3 mb-4">Add a new list
+        <i class="fa fa-plus"></i>
+     </h1>
+  </div>
+</div>
+
 
 <div class="form-wrapper mb-5">
   <%= simple_form_for(@list) do |f| %>
     <%= f.input :name %>
     <%= f.input :photo, as: :file %>
     <div class="d-flex justify-content-center mt-2">
-      <%= f.submit class: "btn btn-primary p-3 border-2 me-2" %>
-      <%= link_to "Back to lists", lists_path, class: "btn btn-dark p-3 border-2" %>
+      <%= f.submit class: "btn btn-outline-primary mb-3 rounded-pill p-3 me-2" %>
+      <%= link_to "Back to lists", lists_path, class: "btn btn-outline-dark mb-3 rounded-pill p-3 me-2" %>
     </div>
   <% end %>
 </div>

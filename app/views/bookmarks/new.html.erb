@@ -1,9 +1,18 @@
+<div class="banner">
+  <div class="container">
+    <h1 class="text-center mt-3 mb-4">Add a movie
+        <i class="fa fa-plus"></i>
+     </h1>
+  </div>
+</div>
+
+
 <div class="form-wrapper mb-5">
   <%= simple_form_for([@list, @bookmark]) do |f| %>
     <%= f.input :comment %>
     <%= f.input :movie_id, collection: Movie.all %>
     <div class="d-flex justify-content-center mt-2">
-      <%= f.submit class: "btn btn-primary p-3 border-2 me-2" %>
+      <%= f.submit class: "btn btn-outline-primary mb-3 rounded-pill p-3 me-2 me-2" %>
     </div>
   <% end %>
 </div>

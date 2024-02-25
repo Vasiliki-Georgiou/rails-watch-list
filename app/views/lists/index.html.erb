@@ -11,7 +11,7 @@
             <div class="card mb-3 ms-3 rounded" style="width: 18rem; height: 14rem;">
               <div class="card-body d-flex flex-column justify-content-center align-items-center">
                     <% if list.photo.attached? %>
-                      <%= cl_image_tag list.photo.key, height: 100, width: 100, crop: :fill %>
+                      <%= cl_image_tag list.photo.key, height: 100, width: 100, radius: 10, crop: :fill %>
                     <% end %>
                 <li  class="card-title text-center fw-bold mt-3">
                     <%= link_to list.name, list_path(list), class: "text-decoration-none text-dark" %>

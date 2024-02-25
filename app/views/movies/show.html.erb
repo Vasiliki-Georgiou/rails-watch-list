@@ -1,0 +1,39 @@
+<%# Header Banner %>
+<div class="banner">
+  <div class="container">
+    <h1 class="text-center mt-3 mb-4">MovieManiax</h1>
+    <h5>"Organize Your Movie Madness with MovieManiax!"</h5>
+  </div>
+</div>
+
+<%# Movie Header %>
+<div class="list-card">
+  <div class="card-header d-flex justify-content-center align-items-center p-4">
+    <div>
+        <h5 class="card-title fw-bold ms-2">Movie details</h5>
+    </div>
+  </div>
+  </div>
+</div>
+
+<%# Movie container card %>
+
+<div class="movie-container">
+
+<div class="movie-wrapper">
+        <div class="image-container">
+          <img src=" <%= @movie.poster_url %> " class="card-img-top" alt="...">
+        </div>
+        <div class="content-container">
+          <h5><%= @movie.title %></h5>
+          <span>Synopsis: </span>
+          <p><%= @movie.overview %></p>
+          <p>
+            <span>Rating:</span> <%= @movie.rating %>
+          </p>
+          <%= link_to "Back to movies", lists_path, class: "btn btn-outline-dark rounded-pill mt-3 mb-3 p-3 fs-3" %>
+        </div>
+</div>
+
+
+</div>

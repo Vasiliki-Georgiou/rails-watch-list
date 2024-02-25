@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
 
-  before_action :set_list, only: [:show, :index]
+  before_action :set_movie, only: [:show, :index]
 
   def index
     @movies = Movie.all

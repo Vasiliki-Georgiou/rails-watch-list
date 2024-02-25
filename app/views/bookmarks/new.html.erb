@@ -1,18 +1,30 @@
+<%# Header Banner %>
+
 <div class="banner">
   <div class="container">
-    <h1 class="text-center mt-3 mb-4">Add a movie
-        <i class="fa fa-plus"></i>
-     </h1>
+    <h1 class="text-center mt-3 mb-4">MovieManiax</h1>
+    <h5>"Organize Your Movie Madness with MovieManiax!"</h5>
   </div>
 </div>
 
+<%# List Header %>
+<div class="list-card">
+  <div class="card-header d-flex justify-content-center align-items-center p-4">
+    <div>
+        <h5 class="card-title fw-bold ms-2">Add a movie</h5>
+    </div>
+  </div>
+  </div>
+</div>
 
+<%# Form  %>
 <div class="form-wrapper mb-5">
   <%= simple_form_for([@list, @bookmark]) do |f| %>
-    <%= f.input :comment %>
-    <%= f.input :movie_id, collection: Movie.all %>
-    <div class="d-flex justify-content-center mt-2">
-      <%= f.submit class: "btn btn-outline-primary mb-3 rounded-pill p-3 me-2 me-2" %>
+    <%= f.input :comment, class: "fs-1" %>
+    <%= f.input :movie_id, collection: Movie.all, class: "fs-1" %>
+    <div class="d-flex justify-content-center align-items-center mt-5">
+      <%= f.submit class: "btn btn-outline-warning mb-3 rounded-pill p-3 me-3 fs-4" %>
+      <%= link_to "Back to lists", list_path(@list), class: "btn btn-outline-dark mb-3 rounded-pill p-3 me-2 fs-4" %>
     </div>
   <% end %>
 </div>

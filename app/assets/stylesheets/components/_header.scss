@@ -10,12 +10,12 @@
 
 .banner h1 {
   font-family: 'Kode Mono', sans-serif;
-  font-size: 3rem;
-  color: #FBA834;
+  font-size: 5rem;
+  color: $title-color;
   font-weight: bold;
   transition: color 2s;
-  text-decoration: double;
   z-index: 10;
+  text-shadow: 1px 1px 2px $text-shadow_h1;
 }
 
 h1:hover {
@@ -23,7 +23,9 @@ h1:hover {
 }
 
 h5 {
+  color: $h5-titles;
   text-align: center;
   padding: 10px;
   font-weight: 700;
+  font-size: 2rem;
 }
